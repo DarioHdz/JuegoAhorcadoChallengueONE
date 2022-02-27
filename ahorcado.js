@@ -87,7 +87,9 @@ function buscarLetra(letra){
     if(!encontrada){
         if (!finDelJuego(contador)) {
             espacios[espacios.length - 1].textContent = "¡FIN DEL JUEGO!";
-            location.reload();
+            setTimeout(function(){
+                location.reload();
+            },5000);
             return;
         }else{
             dibujarLetraIncorrecta(letra);
@@ -165,7 +167,9 @@ function verificarGanador(){
         espacios[espacios.length - 1].classList.remove("labelIncorrecta");
         espacios[espacios.length - 1].classList.add("labelGanador");
         espacios[espacios.length - 1].textContent = "¡GANASTE!";
-        location.reload();
+        setTimeout(function(){
+            location.reload();
+        },5000);
         return;
     }else{
         return;
